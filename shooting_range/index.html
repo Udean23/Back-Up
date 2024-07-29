@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="gamemenu"> 
+        <div class="option">
+            <img src="Sprites/shooter.png">
+
+            <div class="input">
+                <input type="text" id="username" required placeholder="Input Username" value="">
+            </div>
+            <div class="input">
+                <select name="level" id="level">
+                    <option value="" disabled selected hidden>Select Level</option>
+                    <option value="EASY">Easy</option>
+                    <option value="MEDIUM">Medium</option>
+                    <option value="HARD">Hard</option>
+                </select>
+            </div>
+
+            <br>
+            
+            <div class="cc-selector">
+                <input id="target1" type="radio"  name="target" value="1" checked/>
+                <label class="drinkcard-cc target1" for="target1"></label>
+                <input id="target2" type="radio"  name="target" value="2" />
+                <label class="drinkcard-cc target2"for="target2"></label>
+                <input id="target3" type="radio"  name="target" value="3" />
+                <label class="drinkcard-cc target3"for="target3"></label>
+            </div>
+
+            <div class="cc-selector">
+                <input id="pointer1" type="radio"  name="pointer" value="1" checked/>
+                <label class="drinkcard-cc pointer1" for="pointer1"></label>
+                <input id="pointer2" type="radio"  name="pointer" value="2" />
+                <label class="drinkcard-cc pointer2"for="pointer2"></label>
+            </div>
+
+
+            <div class="btn">
+                <button type="button" onclick="play()">Play Game</button>
+                <button type="button" id="instructionBtn" onclick="reveal()" style="background-color: #cb5d02;">Instruction</button>
+            </div>
+            
+        </div>
+
+        <div id="instruction">
+            <div class="head">
+                <h2>How to play game</h2>
+                <img src="Sprites/image.png" onclick="hide()" style="border-radius: 5px; cursor: pointer;">
+            </div>
+
+            <br>
+
+            <div class="rules">
+                <h3>1.Input username</h3>
+                <h3>2.Point the pointer at the target</h3>
+                <h3>3.Click to shoot</h3>
+                <h3>4.Get as many points as possible</h3>
+                <h3>5.Enjoy!</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="gameplay">
+        <div class="container">
+            <div class="statistic">
+                <p id="player"></p>
+                <button type="button" class="startBtn" style="color: #fff;border: 2px solid #fff;background: transparent;padding: 15px 45px;font-size: 1.1rem;margin-top: 1px;outline: none;cursor: none;">Start Game</button>
+                <div id="counter">0</div>
+            </div>
+          
+            <img src="Sprites/pointer.png" alt="Crosshair" class="cursor" />
+            <img src="Sprites/boom.png" alt="Blood Spot" class="bloodSpot" />
+            <br>
+            <img src="Sprites/gun2.png" alt="gun2" id="gun" />
+        </div>
+
+        <div class="leaderboard">
+            <h2 style="margin-top: 45px;">LEADERBOARD</h2>
+            <h2>__________________________</h2>
+            <br>
+            <ul id="highScoresList"></ul>
+        </div>
+    </div>
+
+    <div class="finalscore">
+
+        <div class="lastscore">
+            <h2>Game Over</h2>
+            <br>
+            <h3 id="playername"></h3>
+            <br>
+            <div class="finally">
+                <h3 id="scorelast"></h3>
+                <h3 id="dificultylast"></h3>
+            </div>
+            <button id="saveScoreBtn" type="button" onclick="saveHighScore(event)" >Save Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

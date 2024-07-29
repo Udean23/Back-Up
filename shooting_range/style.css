@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  text-align: center;
+}
+
+.statistic{
+  color: #fff;
+  display: flex;
+  background-color: #383838;
+  padding: 15px;
+  opacity: 0.9;
+  gap: 450px;
+  justify-content: center;
+}
+
+#username , #counter{
+  font-size: 20px;
+}
+
+.container {
+  background-image: url("Sprites/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  height: 100%;
+  cursor: none;
+  display: none;
+  width: 85%;
+}
+
+.leaderboard{
+  background-color: #000000;
+  display: none;
+  color: white;
+  justify-content: center;
+  width: 15%;
+  padding: 10px;
+}
+
+#highScoreList{
+  color: #fff;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+}
+
+.bloodSpot {
+  position: absolute;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: none;
+}
+
+.terrorist,.terrorist2,.terrorist3 {
+  height: 125px;
+}
+
+img::selection {
+  background: transparent;
+}
+
+.cursor {
+  position: absolute;
+  height: 70px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  transition: 0.3s transform ease;
+  transform-origin: 100% 100%;
+}
+
+#gun{
+  margin-top: 365px;
+  width: 350px;
+}
+
+#gamemenu{
+  margin-left: 100px;
+  margin-top: 25px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.head{
+    display: flex;
+    gap: 450px;
+}
+
+.head h2{
+    font-size: 30px;
+}
+
+#instruction{
+  background-color: #323232;
+  color: #fff;
+  border-radius: 4px;
+  padding: 24px;
+  min-width: 745px;
+  display: none;
+}
+
+.rules{
+    text-align: left;
+    margin-top: 10px;
+}
+
+.rules h3{
+    margin-top: 15px;
+}
+
+.input input , .input select{
+  border: 2.5px solid gray;
+  border-radius: 5px;
+  background-color: rgb(191, 189, 189);
+  padding: 10px;
+  width: 300px;
+  color: #000000;
+  margin-top: 25px;
+}
+
+button {
+  background-color: #1ec51e;
+  color: #fff;
+  border: 2px solid #000000;
+  border-radius: 7px;
+  padding: 15px 45px;
+  font-size: 1.1rem;
+  margin-top: 3em;
+  outline: none;
+  cursor: pointer;
+}
+
+.cc-selector input{
+  margin:0;padding:0;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+.target1{background-image:url(Sprites/target1.png);}
+.target2{background-image:url(Sprites/target2.png);}
+.target3{background-image:url(Sprites/target3.png);}
+
+.pointer1{background-image: url(Sprites/gun1.png);}
+.pointer2{background-image: url(Sprites/gun2.png);}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+.drinkcard-cc{
+  cursor:pointer;
+  background-size:contain;
+  background-repeat:no-repeat;
+  display:inline-block;
+  width:100px;height:70px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+  -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+  filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+  filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.finalscore{
+  display: none;
+  background-image: url("Sprites/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.lastscore{
+  margin-top: 100px;
+  color: #fff;
+  background-color: #383838;
+  padding: 15px;
+  opacity: 0.9;
+  width: 25%;
+  margin-left: 350px;
+}
+
+.finally{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  height: 25vh;
+}

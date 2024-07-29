@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadBall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="gamemenu">
+        <h2>Game setting</h2>
+        <div class="inputbox">
+            <div class="player">
+                <h3>Player Name</h3>
+                <label >Player 1</label>
+                <input type="text" required name="player1" id="username1" value="">
+                <label >Player 2</label>
+                <input type="text" required name="player2" id="username2" value="">
+            </div>
+            <div class="team">
+                <h3>Player Team</h3>
+                <div class="in">
+                    <div class="input">
+                        <select name="team1" id="team1" required>
+                            <option value="" disabled selected hidden>Player 1 Team</option>
+                            <option value="1">Brazil</option>
+                            <option value="2">England</option>
+                            <option value="3">Germany</option>
+                            <option value="4">Italy</option>
+                            <option value="5">Japan</option>
+                            <option value="6">Netherlands</option>
+                            <option value="7">Portugal</option>
+                            <option value="8">Spain</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <select name="team2" id="team2" required>
+                            <option value="" disabled selected hidden>Player 2 Team</option>
+                            <option value="1">Brazil</option>
+                            <option value="2">England</option>
+                            <option value="3">Germany</option>
+                            <option value="4">Italy</option>
+                            <option value="5">Japan</option>
+                            <option value="6">Netherlands</option>
+                            <option value="7">Portugal</option>
+                            <option value="8">Spain</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="level">
+                <h3>Dificulty</h3>
+                <div class="input">
+                    <select name="level" id="level" required>
+                        <option value="" disabled selected hidden>Select Level</option>
+                        <option value="EASY">Easy</option>
+                        <option value="MEDIUM">Medium</option>
+                        <option value="HARD">Hard</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ball">
+                <h3>Chose Ball</h3>
+                <input type="radio" name="ball" value="1"><img src="source/Ball 01.png" style="height: 35px; width: 35px;">
+                <input type="radio" name="ball" value="2"><img src="source/Ball 02.png" style="height: 35px; width: 35px;">
+            </div>
+            <div class="start">
+                <button onclick="PlayGame()">Start</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="game">
+        <div class="info">
+            <div class="playername">
+                <div class="p1">
+                    <h3 id="p1name"></h3>
+                </div>
+            </div>
+            <div class="scoreboard">
+                <div class="flag" style="margin-left: 200px; margin-right: 200px;">
+                    <img src="source/Flag/Brazil.png" alt="flag1" id="flag1" />
+                    <div class="score">
+                        <div id="score1"></div>
+                        <div id="score2"></div>
+                    </div>
+                    <img src="source/Flag/Brazil.png" alt="flag2" id="flag2"  />
+                </div>
+            </div>
+            <div class="playername">
+                <div class="p2">
+                    <h3 id="p2name"></h3>
+                </div>
+            </div>
+        </div>
+        <div class="timer">
+            <h2>Timer</h2>
+            <p id="timeroutput">0</p>
+        </div>
+        <canvas id="canvas" width="1200" height="450"></canvas>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
